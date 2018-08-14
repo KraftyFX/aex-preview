@@ -4,11 +4,12 @@
 // Any project/comp/layer/etc. will work
 var aeProj = app.project;
 
-var jsProj = aex.toJsObject(aeProj);
+var toJsResult = aex.toJsObject(aeProj);
+var jsProj = toJsResult.value;
 
-jsProj.comp[3].layers[3].name = 'Foo';
+jsProj.result.comp[3].layers[3].name = 'Foo';
 
-aex.assign(aeProj, jsProj);
+var assignResult = aex.assign(aeProj, jsProj);
 ```
 
 # Concepts

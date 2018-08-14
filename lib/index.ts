@@ -36,8 +36,10 @@ namespace aex
 
     function getReaderForAeObject(aeObject: AeSerializable)
     {
-        if (aeObject instanceof Project) return ProjectReader;
+        if (aeObject instanceof Project)           return ProjectReader;
         if (aeObject instanceof ItemCollection)    return ItemCollectionReader;
+        if (aeObject instanceof CompItem)          return CompItemReader;
+        if (aeObject instanceof FolderItem)        return FolderItemReader;
         if (aeObject instanceof LayerCollection)   return LayerCollectionReader;
 
         // TODO: Add other object types
@@ -47,7 +49,11 @@ namespace aex
 
     function getAssignerForAeObject(aeObject: AeSerializable)
     {
-        if (aeObject instanceof Project) return ProjectAssigner;
+        if (aeObject instanceof Project)           return ProjectAssigner;
+        if (aeObject instanceof ItemCollection)    return ItemCollectionAssigner;
+        // if (aeObject instanceof CompItem)          return CompItemAssigner;
+        // if (aeObject instanceof FolderItem)        return FolderItemAssigner;
+        if (aeObject instanceof LayerCollection)   return LayerCollectionAssigner;
 
         // TODO: Add other object types
         
