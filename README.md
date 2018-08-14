@@ -14,6 +14,8 @@ TODO
 Import the library and use one of the top level functions
 
 ## Reading the DOM
+Get a reference to the thing you want to serialize and pass it into the `toJsObject` function.
+
 ```javascript
 #include "aex.jsx"
 
@@ -25,11 +27,13 @@ if (toJsResult.success)
 {
     var jsProj = toJsResult.value;
 
-    // Save the file
+    // Save jsProj to a file
 }
 ```
 
 ## Updating the DOM
+Get a reference to the thing you want to serialize and pass in a javascript object that resembles what you get from `toJsObject` and call `assign`.
+
 ```javascript
 #include "aex.jsx"
 
@@ -40,7 +44,7 @@ var jsProj = toJsResult.value;
 
 jsProj.comp[0].name = 'Foo';
 
-var assignResult = aex.assign(aeProj, jsProj);
+var assignResult = aex.assign(app.project, jsProj);
 
 if (assignResult.success)
 {
