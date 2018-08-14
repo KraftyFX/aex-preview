@@ -1,0 +1,5 @@
+*.d.ts
+*.d.ts.map
+aex.jsx
+/out
+/node_modules
