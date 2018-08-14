@@ -1,24 +1,54 @@
-# How to use this API
+# AEX
+This is an After Effects scripting library that lets you:
+1. Read the AE DOM as a simple JS object that can be saved to disk.
+2. Update the AE DOM by providing simple JS objects.
 
+# Requirements
+1. Adobe After Effects
+1. VSCode as your editor
+
+# Download/Install
+TODO
+
+# How to use this library
+Import the library and use one of the top level functions
+
+## Reading the DOM
 ```javascript
-// Any project/comp/layer/etc. will work
+#include "aex.jsx"
+
+var aeProj = app.project;
+
+var toJsResult = aex.toJsObject(aeProj);
+
+if (toJsResult.success)
+{
+    var jsProj = toJsResult.value;
+
+    // Save the file
+}
+```
+
+## Updating the DOM
+```javascript
+#include "aex.jsx"
+
 var aeProj = app.project;
 
 var toJsResult = aex.toJsObject(aeProj);
 var jsProj = toJsResult.value;
 
-jsProj.result.comp[3].layers[3].name = 'Foo';
+jsProj.comp[0].name = 'Foo';
 
 var assignResult = aex.assign(aeProj, jsProj);
+
+if (assignResult.success)
+{
+    // The project was successfully updated
+}
 ```
 
-# Concepts
-
-## Readers
-A set of helper classes that reads the AE DOM and returns a json object that can be saved/modified.
-
-## Assigners
-A set of helper classes that takes a JSON blob and updates the AE DOM with it.
-
-## Differs - Not yet implemented
-Compares two AE doms or JSON blobs and describes the differences between them.
+## Diffing the DOM
+```javascript
+// TODO
+```
