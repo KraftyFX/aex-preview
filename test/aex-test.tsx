@@ -1,4 +1,4 @@
-//#include "lib/aex-lib.jsx"
+//@include "lib/aex-lib.jsx"
 
 var jsResult = aex.toJsObject(app.project);
 

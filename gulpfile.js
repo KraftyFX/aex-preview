@@ -43,7 +43,6 @@ gulp.task('build:testjsx', () => {
     return tsProject.src()
         .pipe(tsProject())
         .pipe(gap.prependText('// KraftyFX Inc. - Test Script'))
-        .pipe(replace('//#include', '#include'))
         .pipe(gulp.dest(paths.aeScriptsDir));
 });
 
