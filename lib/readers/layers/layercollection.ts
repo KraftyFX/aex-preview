@@ -2,8 +2,6 @@ namespace aex
 {
     export class LayerCollectionReader
     {
-        public static readonly type = TypeName.Layer;
-
         constructor(public aeLayers:LayerCollection, public options: IReadOptions)
         {
         }

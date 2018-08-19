@@ -2,4 +2,5 @@
 *.d.ts.map
 aex.jsx
 /out
+/lib
 /node_modules

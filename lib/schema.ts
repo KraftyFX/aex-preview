@@ -5,7 +5,10 @@ namespace aex
         Project = 'IProject',
         CompItem = 'ICompItem',
         FolderItem = 'IFolderItem',
-        Layer = 'ILayer'
+        AVLayer = 'IShapeLayer',
+        ShapeLayer = 'IShapeLayer',
+        LightLayer = 'ILightLayer',
+        CameraLayer = 'ICameraLayer',
     }
 
     export interface IProject
@@ -45,6 +48,11 @@ namespace aex
 
     export interface ILayerBase
     {
-        __type: TypeName.Layer
+        __type: TypeName
+    }
+
+    export interface IShapeLayer extends ILayerBase
+    {
+        __type: TypeName.ShapeLayer
     }
 }

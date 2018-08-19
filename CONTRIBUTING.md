@@ -1,18 +1,26 @@
 # Contributing to aex
 First off, thank you for taking the time to contribute!
 
-[What should I know to get started](#what-should-I-know-to-get-started)
-[How can I contribute](#how-can-i-contribute)
+[How do I get started?](#how-to-get-started)
+[How can I contribute?](#how-can-i-contribute)
 
-## What should I know to get started
-### Getting Started
-1. Clone the repository
-1. Build library
+# How to get started
+## Prerequisits
+Before you start you'll need a few tools:
+
+1. Adobe After Effects
+1. A current version of [VSCode](https://code.visualstudio.com/download).  
+1. Be comfortable with TypeScript. If you never worked with it before you should read the [5 minute overview of TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+
+## Getting Started
+1. Clone the repository and open the `aex.code-workspace` file in VSCode.
+1. Using the [VSCode Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) or your local shell run the following:
 ```bash
 cd lib
 npm install
-npm start
+npm start     # This will compile and run in watch mode
 ```
+
 
 ### Project Structure
 There are 3 major functions in aex: 

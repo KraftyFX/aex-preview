@@ -2,7 +2,15 @@
 	"folders": [
 		{
 			"name": "aex",
-			"path": "."
+			"path": "./"
+		},
+		{
+			"name": "AE 2018 Scripts (Mac)",
+			"path": "/Applications/Adobe After Effects CC 2018/Scripts"
+		},
+		{
+			"name": "AE 2018 Scripts (Win)",
+			"path": "C:\\Program Files\\Adobe\\Adobe After Effects <version>\\Support Files\\Scripts"
 		}
 	],
 	"settings": {
