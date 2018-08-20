@@ -20,7 +20,7 @@ Before you start you'll need:
 ```bash
 > npm install
 ```
-## Starting development
+## Development
 When you're ready to build and test the library go to the VSCode integrated terminal for the `aex` folder and type:
 ```
 > npm start
@@ -44,5 +44,5 @@ The library has a few top level functions:
 Reading the AE dom is powered by **Readers** and updating the dom is powered by **Assigners**.  Each contains a hierarchy of classes that mirror an object in the AE dom.  So for example the `CompItemReader` helps produce the JSON for a single comp and the `CompAssigner` reads that JSON and updates AE.  There are dedicated classes for collections as well (e.g. `ItemCollectionReader` and `ItemCollectionAssigner`.
 
 
-### How can I contribute
+# How to contribute
 TODO
