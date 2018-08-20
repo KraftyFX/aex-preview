@@ -54,5 +54,8 @@ gulp.task('deploy:all', gulp.series(['build:aexjsx', 'build:testjsx'], () => {
 }));
 
 gulp.task('watch', gulp.series(['deploy:all'], () => {
-    gulp.watch('*.ts*', gulp.series(['deploy:all']));
+    gulp.watch([
+        './lib/**/*.ts',
+        './test/*.ts'
+    ], gulp.series(['deploy:all']));
 }));
