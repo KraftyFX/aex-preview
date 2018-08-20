@@ -2,6 +2,7 @@
 First off, thank you for taking the time to contribute!
 
 [How do I get started?](#how-to-get-started)
+
 [How can I contribute?](#how-can-i-contribute)
 
 # How to get started
