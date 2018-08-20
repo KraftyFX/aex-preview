@@ -16,7 +16,6 @@ Before you start you'll need a few tools:
 1. Clone the repository and open the `aex.code-workspace` file in VSCode.
 1. Using the [VSCode Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) or your local shell run the following:
 ```bash
-cd lib
 npm install
 npm start     # This will compile and run in watch mode
 ```
