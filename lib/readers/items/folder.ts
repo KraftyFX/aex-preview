@@ -10,7 +10,7 @@ namespace aex
         {
             const { aexType, commonMembers } = mapping.folderItem;
 
-            const jsFolder = { __type: aexType } as IFolderItem;
+            const jsFolder = { type: aexType } as IFolderItem;
 
             assignMembersFrom(jsFolder, this.aeFolder, commonMembers);
 

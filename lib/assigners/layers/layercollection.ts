@@ -43,11 +43,11 @@ namespace aex
 
         private addLayer(jsLayer: ILayerBase)
         {
-            switch (jsLayer.__type)
+            switch (jsLayer.type)
             {
                 // TODO: Add Layer Types
                 default:
-                    throw new Error(`Layer type ${jsLayer.__type} is not supported.`);
+                    throw new Error(`Layer type ${jsLayer.type} is not supported.`);
             }
         }
     }

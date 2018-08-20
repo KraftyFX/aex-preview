@@ -30,7 +30,7 @@ namespace aex
     {
         if (!('type' in jsObject)) {
             // Lets assume the target type actually belongs to the assigner class
-            return (jsObject as any).__type = clazz.type;
+            return (jsObject as any).type = clazz.type;
         }
     }
 

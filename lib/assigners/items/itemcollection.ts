@@ -43,12 +43,12 @@ namespace aex
 
         private addItem(jsItem: IItemBase)
         {
-            switch (jsItem.__type)
+            switch (jsItem.type)
             {
                 case TypeName.CompItem: this.addCompItem(jsItem as ICompItem); break;
                 case TypeName.FolderItem: this.addFolderItem(jsItem as IFolderItem); break;
                 default:
-                    throw new Error(`Item type ${jsItem.__type} is not supported.`);
+                    throw new Error(`Item type ${jsItem.type} is not supported.`);
             }
         }
 

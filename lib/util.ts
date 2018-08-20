@@ -6,12 +6,12 @@ namespace aex
     export function assertIsType(jsObject: any, type: any)
     {
         if (isType(jsObject, type))
-            throw new Error(`Cannot convert type. The object does not have a __type with ${type}`);
+            throw new Error(`Cannot convert type. The object does not have a type with ${type}`);
     }
 
     export function isType(jsObject: any, type: any)
     {
-        return jsObject.__type !== type;
+        return jsObject.type !== type;
     }
 
     export function forEach<T>(arr: { length: number, [n: number]: T }, fn: (v:T, i: number, length: number) => void)

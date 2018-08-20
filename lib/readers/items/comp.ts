@@ -11,7 +11,7 @@ namespace aex
         {
             const { aexType, commonMembers } = mapping.compItem;
 
-            const jsCompItem = { __type : aexType } as ICompItem;
+            const jsCompItem = { type : aexType } as ICompItem;
 
             assignMembersFrom(jsCompItem, this.aeCompItem, commonMembers);
 

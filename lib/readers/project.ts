@@ -10,7 +10,7 @@ namespace aex
         {
             const { aexType, commonMembers } = mapping.project;
 
-            const jsProj = { __type: aexType } as IProject;
+            const jsProj = { type: aexType } as IProject;
 
             assignMembersFrom(jsProj, this.aeProj, commonMembers);
 

@@ -13,7 +13,7 @@ namespace aex
 
     export interface IProject
     {
-        __type: TypeName.Project
+        type: TypeName.Project
         bitsPerChannel: number
         transparencyGridThumbnails: boolean
 
@@ -22,7 +22,7 @@ namespace aex
 
     export interface IItemBase
     {
-        __type: TypeName,
+        type: TypeName,
         id: number,
         name: string,
         comment: string,
@@ -31,13 +31,13 @@ namespace aex
 
     export interface IFolderItem extends IItemBase
     {
-        __type: TypeName.FolderItem
+        type: TypeName.FolderItem
         items: IItemBase[]
     }
 
     export interface ICompItem extends IItemBase
     {
-        __type: TypeName.CompItem,
+        type: TypeName.CompItem,
         layers: ILayerBase[],
         width : number,
         height: number,
@@ -48,11 +48,11 @@ namespace aex
 
     export interface ILayerBase
     {
-        __type: TypeName
+        type: TypeName
     }
 
     export interface IShapeLayer extends ILayerBase
     {
-        __type: TypeName.ShapeLayer
+        type: TypeName.ShapeLayer
     }
 }
