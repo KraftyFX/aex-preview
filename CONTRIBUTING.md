@@ -20,16 +20,18 @@ Before you start you'll need:
 ```bash
 > npm install
 ```
-## Development
+## Building the Project
 When you're ready to build and test the library go to the VSCode integrated terminal for the `aex` folder and type:
 ```
 > npm start
 ```
 This command will: 
-1. Perform an initial compilation of the library
-1. Deploy the library into the `test/lib` project folder
-1. Compile the test project and copy both the library and the test script file into the After Effects Script directory
-1. Enter watch mode and continuously recompile as changes are made to the library OR the project.
+1. Compile the library in `lib` and deploy it into the `test/lib` folder. Ths happens b/c the test project needs the final type definition file to compile correctly.
+1. Compile the test project and deploy the library AND the test script file into the After Effects Script directory.
+1. Watch for changes to the library or the test script and redeploy it.
+
+## Development Workflow
+TODO
 
 
 ### Project Structure
