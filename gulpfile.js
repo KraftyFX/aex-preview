@@ -10,13 +10,14 @@ const gulp = require('gulp'),
     merge = require('merge-stream');
 
 const package = require('./package.json');
+const AEVersion = '2018';
 
 function getAeScriptsPath()
 {
     if (process.platform == 'win32') {
-        return `C:\\Program Files\\Adobe\\Adobe After Effects <version>\\Support Files\\Scripts`;
+        return `C:\\Program Files\\Adobe\\Adobe After Effects ${AEVersion}\\Support Files\\Scripts`;
     } else {
-        return `/Applications/Adobe After Effects CC 2018/Scripts`;
+        return `/Applications/Adobe After Effects CC ${AEVersion}/Scripts`;
     }
 }
 
@@ -56,6 +57,6 @@ gulp.task('deploy:all', gulp.series(['build:aexjsx', 'build:testjsx'], () => {
 gulp.task('watch', gulp.series(['deploy:all'], () => {
     gulp.watch([
         './lib/**/*.ts',
-        './test/*.ts'
+        './test/*.tsx'
     ], gulp.series(['deploy:all']));
 }));
