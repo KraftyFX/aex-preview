@@ -8,6 +8,6 @@
     "outDir": "../out",
     "types": [
       "types-for-adobe/AfterEffects/2018/"
-    ],                           /* Type declaration files to be included in compilation. */
+    ]
   }
 }
